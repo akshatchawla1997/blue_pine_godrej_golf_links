@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "inverse-surface": "#dae4ea",
+        "on-surface-variant": "#c3c9b0",
+        "on-primary-fixed": "#131f00",
+        "on-tertiary": "#00315e",
+        "inverse-on-surface": "#293236",
+        "primary": "#9eda2d",
+        "on-secondary": "#3c2f00",
+        "brand-emerald": "#2bb673",
+        "gold-muted": "#c5a059",
+        "on-error-container": "#ffdad6",
+        "surface-container-highest": "#2d363b",
+        "tertiary-fixed": "#d4e3ff",
+        "border-gold-subtle": "rgba(212, 175, 55, 0.24)",
+        "primary-container": "#183214",
+        "error-container": "#93000a",
+        "gold-champagne": "#d4af37",
+        "brand-cyan": "#00a0df",
+        "tertiary": "#a7caff",
+        "surface": "#0c1519",
+        "secondary": "#e9c349",
+        "cream-soft": "#fdfbf7",
+        "surface-container-lowest": "#070f13",
+        "on-tertiary-container": "#00417a",
+        "brand-ruby": "#e31837",
+        "brand-ruby-vivid": "#d82362",
+        "on-background": "#dae4ea",
+        "border-brand-subtle": "rgba(0, 160, 223, 0.2)",
+        "on-primary-container": "#9eda2d",
+        "surface-container-low": "#141d21",
+        "secondary-fixed-dim": "#e9c349",
+        "obsidian-teal": "#0b1418",
+        "background": "#0c1519",
+        "pure-white": "#ffffff",
+        "primary-fixed-dim": "#9dd82c",
+        "secondary-fixed": "#ffe088",
+        "primary-fixed": "#b8f649",
+        "surface-container-high": "#222b30",
+        "on-surface": "#dae4ea",
+        "brand-azure": "#0072ce",
+        "surface-variant": "#2d363b",
+        "on-secondary-fixed": "#241a00",
+        "on-secondary-container": "#342800",
+        "emerald-deep": "#0f382c",
+        "surface-tint": "#9dd82c",
+        "on-tertiary-fixed": "#001c3a",
+        "on-secondary-fixed-variant": "#574500",
+        "secondary-container": "#af8d11",
+        "outline-variant": "#434936",
+        "tertiary-fixed-dim": "#a5c8ff",
+        "tertiary-container": "#73afff",
+        "on-primary": "#233600",
+        "inverse-primary": "#476800",
+        "on-tertiary-fixed-variant": "#004785",
+        "error": "#ffb4ab",
+        "brand-lime": "#84bd00",
+        "on-error": "#690005",
+        "surface-bright": "#313b3f",
+        "surface-container": "#182125",
+        "on-primary-fixed-variant": "#354e00",
+        "outline": "#8d947c",
+        "surface-glass": "rgba(15, 28, 34, 0.78)",
+        "surface-dim": "#0c1519"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "gutter": "1.5rem",
+        "space-xs": "0.25rem",
+        "margin-tablet": "2.5rem",
+        "space-sm": "0.5rem",
+        "margin-desktop": "5rem",
+        "space-2xl": "5rem",
+        "space-xl": "3rem",
+        "gutter-desktop": "2.5rem",
+        "space-lg": "1.75rem",
+        "margin": "1.25rem",
+        "space-md": "1rem"
+      },
+      "fontFamily": {
+        "display": ["Playfair Display"],
+        "body-md": ["Plus Jakarta Sans"],
+        "label-button": ["Plus Jakarta Sans"],
+        "label-eyebrow": ["Plus Jakarta Sans"],
+        "display-mobile": ["Playfair Display"],
+        "headline-md": ["Playfair Display"],
+        "body-lg": ["Plus Jakarta Sans"],
+        "body-sm": ["Plus Jakarta Sans"],
+        "headline-lg-mobile": ["Playfair Display"],
+        "headline-lg": ["Playfair Display"],
+        "headline-sm": ["Playfair Display"],
+        "metric-price": ["Plus Jakarta Sans"],
+        "title-md": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "display": ["3.75rem", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "body-md": ["1rem", { "lineHeight": "1.65", "letterSpacing": "0", "fontWeight": "400" }],
+        "label-button": ["0.875rem", { "lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600" }],
+        "label-eyebrow": ["0.75rem", { "lineHeight": "1.4", "letterSpacing": "0.18em", "fontWeight": "700" }],
+        "display-mobile": ["2.5rem", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+        "headline-md": ["2rem", { "lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "500" }],
+        "body-lg": ["1.125rem", { "lineHeight": "1.7", "letterSpacing": "0", "fontWeight": "400" }],
+        "body-sm": ["0.875rem", { "lineHeight": "1.5", "letterSpacing": "0.005em", "fontWeight": "400" }],
+        "headline-lg-mobile": ["2rem", { "lineHeight": "1.25", "letterSpacing": "0", "fontWeight": "600" }],
+        "headline-lg": ["2.75rem", { "lineHeight": "1.2", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+        "headline-sm": ["1.5rem", { "lineHeight": "1.35", "letterSpacing": "0", "fontWeight": "500" }],
+        "metric-price": ["1.5rem", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+        "title-md": ["1.125rem", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600" }]
+      }
+    }
+  }
+};</script></head><body class="bg-surface text-on-surface antialiased selection:bg-gold-champagne selection:text-surface"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl border-b border-surface-container-high/60 shadow-[0_4px_24px_rgba(0,0,0,0.4)]"><div class="h-20 max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="Godrej Logo" class="h-9 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW7kQdDX8FU7Oy3Dll-O0ZZM8kQ2OPevfwwyi02RxzrX-7VQdbdirk2N1UC7ARyzoBysB_ROCgwBTmfW1mVPErV3_eB4nXPm-zFL2R_Mp0N-lyVI7rUaDv2Yts6fc4U3W6pyuwDid-73Cl0-ZiNALKrKNY1jN6xNDZAz05u342Bv58xJo5tMVc4_JybtyZ5wgj-EORU6KDMhNK0nx3wSStZt10OtArPxggb2bpaME"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-cream-soft tracking-tight">Godrej Golf Links</span><span class="font-label-eyebrow text-label-eyebrow text-gold-muted uppercase">Crown Residences • Greater Noida</span></div></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="bg-surface-container-high text-primary border border-primary/30 font-semibold rounded-lg"><a aria-current="page" class="transition-colors bg-surface-container-high text-primary border border-primary/30 px-3 py-1.5 font-semibold rounded-lg flex items-center gap-1.5 shadow-[0_0_12px_rgba(158,218,45,0.15)]" data-path="crown-residences" href="#"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Crown Residences</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="golf-villas" href="#">Golf Villas</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="avenue-9-commercial" href="#">Avenue 9 Commercial</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="township-masterplan" href="#">Township Masterplan</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing-and-plans" href="#">Pricing &amp; Plans</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="location-advantage" href="#">Location Advantage</a></nav></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface text-on-surface">
+<!-- Atmospheric Ambient Glows with Godrej Tricolor Wave Echoes -->
+<div class="absolute -top-32 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute top-1/2 -right-24 w-[420px] h-[420px] bg-brand-cyan/10 rounded-full blur-[160px] pointer-events-none"></div>
+<div class="absolute -bottom-24 left-10 w-[360px] h-[360px] bg-brand-ruby/10 rounded-full blur-[150px] pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl lg:py-space-2xl relative z-10">
+<!-- Top Eyebrow Ribbon -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high border border-border-gold-subtle rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-gold-champagne animate-pulse"></span>
+<span class="font-label-eyebrow text-label-eyebrow uppercase text-gold-champagne tracking-widest">Just Launched • Ultra-Luxury New Phase</span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-brand-ruby-vivid">♦</span>
+<span class="">UPRERAAGT10058</span>
+<span class="hidden sm:inline text-on-surface-variant/40">•</span>
+<span class="hidden sm:inline">Sector 27, Greater Noida</span>
+</div>
+</div>
+<!-- Hero Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Text Column -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-brand-emerald"></span>
+<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-[0.2em]">The Crown Residence Collection</span>
+</div>
+<h1 class="font-display text-display text-cream-soft leading-[1.08] tracking-tight">
+              Where Every Morning Begins with the <span class="italic font-normal text-gold-champagne">Green.</span>
+</h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Godrej Crown Residences at Godrej Golf Links, Sector 27, Greater Noida. A sanctuary spread across a 100-acre masterplanned township anchored by an expansive 9-hole executive golf course. Lavish 3 &amp; 4 BHK golf-facing wellness residences and sovereign private villas.
+          </p>
+<!-- Key Value Pillars -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm py-space-sm">
+<div class="bg-surface-container/90 border border-surface-container-highest p-space-sm rounded-xl shadow-sm flex flex-col">
+<span class="font-label-eyebrow text-label-eyebrow text-gold-muted uppercase">Starting Price</span>
+<span class="font-metric-price text-metric-price text-cream-soft mt-1">₹2.85 Cr*</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant/75">Low-Density Release</span>
+</div>
+<div class="bg-surface-container/90 border border-primary/20 p-space-sm rounded-xl shadow-sm flex flex-col">
+<span class="font-label-eyebrow text-label-eyebrow text-gold-muted uppercase">Payment Structure</span>
+<span class="font-metric-price text-metric-price text-primary mt-1">30:40:30</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant/75">Staggered Milestones</span>
+</div>
+<div class="bg-surface-container/90 border border-gold-champagne/25 p-space-sm rounded-xl shadow-sm flex flex-col">
+<span class="font-label-eyebrow text-label-eyebrow text-gold-muted uppercase">Launch Privilege</span>
+<span class="font-metric-price text-metric-price text-gold-champagne mt-1">₹5 Lakhs*</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant/75">Early Bird EOI Credits</span>
+</div>
+</div>
+<!-- CTAs & Trust Cue -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center px-space-lg py-space-md bg-gold-champagne hover:bg-gold-muted text-surface-container-lowest font-label-button text-label-button rounded-xl shadow-[0_4px_18px_rgba(212,175,55,0.3)] transition-all transform hover:-translate-y-0.5" href="#vip-inquiry-section">
+<span class="mr-space-xs text-brand-ruby-vivid font-bold">♦</span>Request Private Preview
+            </a>
+<button class="inline-flex items-center justify-center px-space-lg py-space-md bg-surface-container-high hover:bg-surface-variant border border-surface-variant text-cream-soft font-label-button text-label-button rounded-xl transition-all shadow-sm" onclick="document.getElementById('brochureModal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[18px] mr-space-xs text-gold-champagne">download</span>Download Exclusive Brochure
+            </button>
+<div class="flex items-center gap-2 text-on-surface-variant text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span class="">100-Acre Master Township</span>
+</div>
+</div>
+</div>
+<!-- Visual Hero Showcase -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl bg-surface-container border border-surface-container-highest/80">
+<img alt="Godrej Golf Links 100-Acre Master Township Vista" class="w-full h-[480px] lg:h-[540px] object-cover object-center transition-transform duration-700 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VkXP2zdYMk_jugyOaZDV3oUoQZJEHDm01XeYWqvyAqUoZQxjkcJDEyfrbVCrW8UKXuciYk6Rz8zGKoQAuc3oGCwK-ONbUN64iTk0YTIqPev-X1FLqwlFiNdWwNu7-SZrWHdAnMUKzxkq3zeI29dgNJCu9S_WFnhwiuVoOpd1CXLN5NoBHCYm06RTmGwtcq6hg13X8XiXvcEGHiByDaJ77WF8mhMhJES3o1Zq5yvolU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/20 to-transparent"></div>
+<!-- Overlay Card Bottom -->
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container/90 backdrop-blur-md border border-border-gold-subtle p-space-md rounded-xl shadow-lg flex items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-eyebrow text-label-eyebrow text-gold-champagne uppercase">Live Fairway Vistas</span>
+<span class="font-title-md text-title-md text-cream-soft">9-Hole Executive Course</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Signature greens &amp; illuminated water bodies</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high border border-primary/30 text-primary flex items-center justify-center shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">sports_golf</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- QUICK HIGHLIGHT STATS BAR -->
+<section class="w-full bg-surface-container-low border-y border-surface-container-high/60 py-space-lg">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="flex flex-col gap-1 p-space-sm bg-surface-container border border-surface-container-high rounded-lg">
+<span class="font-label-eyebrow text-label-eyebrow text-gold-muted uppercase">Township Scale</span>
+<span class="font-metric-price text-metric-price text-cream-soft">100 Acres</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Integrated Golf Enclave</span>
+</div>
+<div class="flex flex-col gap-1 p-space-sm bg-surface-container border border-surface-container-high rounded-lg">
+<span class="font-label-eyebrow text-label-eyebrow text-gold-muted uppercase">Championship Layout</span>
+<span class="font-metric-price text-metric-price text-primary">9-Hole Golf</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Designed by Global Masters</span>
+</div>
+<div class="flex flex-col gap-1 p-space-sm bg-surface-container border border-surface-container-high rounded-lg">
+<span class="font-label-eyebrow text-label-eyebrow text-gold-muted uppercase">Direct Metro</span>
+<span class="font-metric-price text-metric-price text-brand-cyan">Delta 1 Aqua</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3 Minutes from Township Gate</span>
+</div>
+<div class="flex flex-col gap-1 p-space-sm bg-surface-container border border-surface-container-high rounded-lg">
+<span class="font-label-eyebrow text-label-eyebrow text-gold-muted uppercase">International Airport</span>
+<span class="font-metric-price text-metric-price text-gold-champagne">Jewar Airport</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Signal-free Yamuna Expwy Drive</span>
+</div>
+</div>
+</div>
+</section>
+<!-- THREE PILLARS: PROJECT PORTFOLIO & OFFERINGS -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-2xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<span class="font-label-eyebrow text-label-eyebrow text-gold-champagne uppercase">Three Distinct Dimensions</span>
+<h2 class="font-headline-lg text-headline-lg text-cream-soft">The Grand Portfolio at Sector 27</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Explore bespoke typologies tailored for modern scions, connoisseurs of grand sprawling villas, and discerning high-street retail investors.</p>
+</div>
+<a class="inline-flex items-center gap-space-xs font-label-button text-label-button text-gold-champagne hover:text-gold-muted transition-colors" href="#configurations-matrix">
+<span class="">Compare All Configurations</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+</div>
+<!-- Portfolio Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Pillar 1: Crown Residences -->
+<div class="flex flex-col bg-surface-container rounded-2xl overflow-hidden shadow-xl border border-surface-container-high group hover:border-primary/40 transition-colors">
+<div class="relative h-72 overflow-hidden bg-surface-container-low">
+<img alt="Godrej Crown Residences Living Room Luxury Interior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1XWx-ShipqS-nYLZyj9LRLXk-8OsQZ1hE9Aim827N5QfuiMyz1CU4rcfDEJ5oZA02-yxaExOt-sM0CYQVk3foiMlEMiircIi-Q-gn0HVcutbj4-tyOSfiAzpUkP1eJn-OA7nJ-GxQa3rw-w5qU4Hu5bItaLKS8o3zQo2u2QN4kblOkppJlzX2y79uOSAgpLsDj0Y0GkKj-G2xFpDE_y16lAp-2AWTaJh5j9g-RKR7o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-black/40"></div>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 border border-primary/40 text-primary font-label-eyebrow text-label-eyebrow px-space-sm py-1 rounded-full uppercase shadow-md flex items-center gap-1.5 backdrop-blur-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> New Launch Phase
+            </div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-cream-soft">Godrej Crown Residences</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md flex-1 justify-between">
+<div class="flex flex-col gap-space-sm">
+<span class="font-body-sm text-body-sm text-gold-muted font-medium">Ultra-Luxury Golf-Facing High-Rise</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Low-density towers featuring 3 &amp; 4 BHK palatial formats from 1,769 to 3,294 sq. ft. Floor-to-ceiling panoramic glass framing lush fairways, bespoke double-height living expanses, and private elevator lobbies.
+              </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-high border border-surface-variant text-[11px] font-body-sm text-on-surface">1,769 - 3,294 Sq.Ft.</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high border border-surface-variant text-[11px] font-body-sm text-on-surface">Wrap-around Decks</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high border border-surface-variant text-[11px] font-body-sm text-on-surface">Triple Height Lobby</span>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between border-t border-surface-container-high/60">
+<div>
+<span class="font-body-sm text-[11px] text-on-surface-variant block uppercase">Priced From</span>
+<span class="font-metric-price text-metric-price text-cream-soft">₹2.85 Cr*</span>
+</div>
+<a class="px-space-md py-space-sm bg-surface-container-high border border-primary/40 hover:bg-primary-container text-primary font-label-button text-label-button rounded-lg transition-colors flex items-center gap-1" href="#vip-inquiry-section">
+                Enquire Details →
+              </a>
+</div>
+</div>
+</div>
+<!-- Pillar 2: Luxury Golf Villas -->
+<div class="flex flex-col bg-surface-container rounded-2xl overflow-hidden shadow-xl border border-surface-container-high group hover:border-gold-champagne/40 transition-colors">
+<div class="relative h-72 overflow-hidden bg-surface-container-low">
+<img alt="Godrej Golf Links Luxury Fairway Villa with Private Pool" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1UFeEthd3eGLPye24c_VRNUVPCj7fFebZByTmTvpj955_Hx0CytwcXYV2zNmtFDg4l5rmblTaNv1aAEGho8QrLgQ_GxU3ZgX0JJ486QA4-4T-skcf6mu2Y3L6sGqkd8C4L2hFnhpKCLJMMPNQupsUziH8tdRf2q0inPJv9tQ7Ra6P288OQp6k70RiRamy6nIOcuqmJL-W5aSM320DqW69KhAMidwEsBUpQ4zmiYgf9h"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-black/40"></div>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 border border-border-gold-subtle text-gold-champagne font-label-eyebrow text-label-eyebrow px-space-sm py-1 rounded-full uppercase shadow-md backdrop-blur-sm">
+              Ready to Move • Resale
+            </div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-cream-soft">Golf-Front Luxury Villas</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md flex-1 justify-between">
+<div class="flex flex-col gap-space-sm">
+<span class="font-body-sm text-body-sm text-gold-muted font-medium">Crest, Evoke &amp; Exquisite Clusters</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Imposing independent residences from 100 to 400 Sq. Yds. (3,715 to 4,177 sq.ft built-up). Indulge in private temperature-controlled plunge pools, personal manicured lawns, and unhindered green outlooks.
+              </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-high border border-surface-variant text-[11px] font-body-sm text-on-surface">100 - 400 Sq.Yd Plots</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high border border-surface-variant text-[11px] font-body-sm text-on-surface">Private Plunge Pools</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high border border-surface-variant text-[11px] font-body-sm text-on-surface">Immediate Possession</span>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between border-t border-surface-container-high/60">
+<div>
+<span class="font-body-sm text-[11px] text-on-surface-variant block uppercase">Villa Pricing</span>
+<span class="font-metric-price text-metric-price text-cream-soft">On Request</span>
+</div>
+<a class="px-space-md py-space-sm bg-surface-container-high border border-gold-champagne/40 hover:bg-gold-champagne/10 text-gold-champagne font-label-button text-label-button rounded-lg transition-colors flex items-center gap-1" href="#vip-inquiry-section">
+                Villa Dossier →
+              </a>
+</div>
+</div>
+</div>
+<!-- Pillar 3: Avenue 9 Commercial -->
+<div class="flex flex-col bg-surface-container rounded-2xl overflow-hidden shadow-xl border border-surface-container-high group hover:border-brand-cyan/40 transition-colors">
+<div class="relative h-72 overflow-hidden bg-surface-container-low">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="High-end modern luxury commercial arcade Godrej Avenue 9 featuring illuminated high-street retail storefronts, manicured plazas, stylish cafe patios with patrons under warm golden twilight lighting, and contemporary glass facade architecture." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMb3DSNJldbs-BewVcMfoUJGc2Pc8pvuR7Xlu2yDZ3OPRHSh5VxckOjCauU3_DSQ4ebS74iL9xBftnRoRBfujMNLLy0FyNA0K5WDXI-eYi_Y1QexZjB3q3jTUAqYKW3G7VedYWfBqgaNLPzhQr-HMPUU79uCUbpU2pWqRMzBz0LwcYZrc1reLj8dB8VS3j5PTTpxh1MLDVviqcWhJwb-lBrW1AofRTGm8YGPxsrKM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-black/40"></div>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 border border-brand-cyan/40 text-brand-cyan font-label-eyebrow text-label-eyebrow px-space-sm py-1 rounded-full uppercase shadow-md backdrop-blur-sm">
+              High-Street Retail
+            </div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-cream-soft">Godrej Avenue 9</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md flex-1 justify-between">
+<div class="flex flex-col gap-space-sm">
+<span class="font-body-sm text-body-sm text-gold-muted font-medium">G+3 Flagship Commercial Anchor</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Premium commercial epicenter engineered for high visibility and captive township footfalls. Boasts an open-air drive-in cinema, the signature Viva Terra experiential park, lockable retail shops, and gourmet dining pavilions.
+              </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-high border border-surface-variant text-[11px] font-body-sm text-on-surface">Drive-in Cinema</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high border border-surface-variant text-[11px] font-body-sm text-on-surface">Viva Terra Park</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high border border-surface-variant text-[11px] font-body-sm text-on-surface">Near Delta 1 Metro</span>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between border-t border-surface-container-high/60">
+<div>
+<span class="font-body-sm text-[11px] text-on-surface-variant block uppercase">Shops From</span>
+<span class="font-metric-price text-metric-price text-cream-soft">₹2.91 Cr*</span>
+</div>
+<a class="px-space-md py-space-sm bg-surface-container-high border border-brand-cyan/40 hover:bg-brand-cyan/10 text-brand-cyan font-label-button text-label-button rounded-lg transition-colors flex items-center gap-1" href="#vip-inquiry-section">
+                Retail Prospectus →
+              </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONFIGURATIONS & PRICING MATRIX -->
+<section class="w-full bg-surface-container-low py-space-2xl" id="configurations-matrix">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-2xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<span class="font-label-eyebrow text-label-eyebrow text-gold-muted uppercase">Transparent Economics</span>
+<h2 class="font-headline-lg text-headline-lg text-cream-soft">Configurations &amp; Investment Guide</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Godrej Crown Residences offers meticulously engineered floor designs oriented along prime golf trajectories with generous carpet ratios.</p>
+</div>
+<div class="flex items-center gap-space-xs text-gold-champagne font-label-button text-label-button bg-surface-container-high border border-border-gold-subtle px-space-md py-space-sm rounded-lg">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="">Verified RERA Inventory</span>
+</div>
+</div>
+<!-- Pricing Comparison Table / Cards -->
+<div class="w-full bg-surface-container rounded-2xl overflow-hidden shadow-xl border border-surface-container-high">
+<div class="hidden lg:grid grid-cols-12 bg-surface-container-high px-space-lg py-space-md text-label-eyebrow font-label-eyebrow uppercase text-gold-muted tracking-wider">
+<div class="col-span-4">Typology &amp; Orientation</div>
+<div class="col-span-2">Super Built Area</div>
+<div class="col-span-3">Indicative Investment Range</div>
+<div class="col-span-3 text-right">Floor Plan &amp; Allocation</div>
+</div>
+<div class="flex flex-col divide-y divide-surface-container-high/60">
+<!-- Row 1 -->
+<div class="grid grid-cols-1 lg:grid-cols-12 px-space-lg py-space-lg bg-surface-container hover:bg-surface-container-high/50 transition-colors items-center gap-space-sm">
+<div class="lg:col-span-4 flex flex-col">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(158,218,45,0.6)]"></span>
+<span class="font-title-md text-title-md text-cream-soft font-semibold">3 BHK Golf Residences</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Expansive Master Suite • Fairway Sunsets • Utility Balcony</span>
+</div>
+<div class="lg:col-span-2 flex flex-col">
+<span class="lg:hidden text-xs text-gold-muted uppercase font-label-eyebrow">Area:</span>
+<span class="font-title-md text-title-md text-on-surface">1,769 Sq. Ft.</span>
+</div>
+<div class="lg:col-span-3 flex flex-col">
+<span class="lg:hidden text-xs text-gold-muted uppercase font-label-eyebrow">Price:</span>
+<span class="font-metric-price text-metric-price text-gold-champagne">₹2.85 Cr – ₹3.41 Cr*</span>
+<span class="font-body-sm text-xs text-on-surface-variant">Launch Phase Benefits Apply</span>
+</div>
+<div class="lg:col-span-3 flex items-center justify-start lg:justify-end gap-space-xs">
+<button class="px-space-md py-space-sm bg-surface-container-high hover:bg-primary-container border border-primary/30 text-primary font-label-button text-label-button rounded-lg transition-colors" onclick="document.getElementById('inquiryTypology').value='3 BHK Golf Residences'; location.href='#vip-inquiry-section';">
+                Lock EOI
+              </button>
+<button class="px-space-md py-space-sm bg-surface-container-high hover:bg-surface-variant text-cream-soft font-label-button text-label-button rounded-lg transition-colors border border-surface-variant" onclick="document.getElementById('brochureModal').classList.remove('hidden')">
+                View Plan
+              </button>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-1 lg:grid-cols-12 px-space-lg py-space-lg bg-surface-container-low hover:bg-surface-container-high/50 transition-colors items-center gap-space-sm">
+<div class="lg:col-span-4 flex flex-col">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-gold-champagne shadow-[0_0_8px_rgba(212,175,55,0.6)]"></span>
+<span class="font-title-md text-title-md text-cream-soft font-semibold">3 BHK Large Golf Residences</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Family Lounge • Double Running Deck • Servants Quarter</span>
+</div>
+<div class="lg:col-span-2 flex flex-col">
+<span class="lg:hidden text-xs text-gold-muted uppercase font-label-eyebrow">Area:</span>
+<span class="font-title-md text-title-md text-on-surface">2,392 Sq. Ft.</span>
+</div>
+<div class="lg:col-span-3 flex flex-col">
+<span class="lg:hidden text-xs text-gold-muted uppercase font-label-eyebrow">Price:</span>
+<span class="font-metric-price text-metric-price text-gold-champagne">₹4.20 Cr – ₹4.96 Cr*</span>
+<span class="font-body-sm text-xs text-on-surface-variant">Signature High-Floor Allotments</span>
+</div>
+<div class="lg:col-span-3 flex items-center justify-start lg:justify-end gap-space-xs">
+<button class="px-space-md py-space-sm bg-surface-container-high hover:bg-primary-container border border-primary/30 text-primary font-label-button text-label-button rounded-lg transition-colors" onclick="document.getElementById('inquiryTypology').value='3 BHK Large Golf Residences'; location.href='#vip-inquiry-section';">
+                Lock EOI
+              </button>
+<button class="px-space-md py-space-sm bg-surface-container-high hover:bg-surface-variant text-cream-soft font-label-button text-label-button rounded-lg transition-colors border border-surface-variant" onclick="document.getElementById('brochureModal').classList.remove('hidden')">
+                View Plan
+              </button>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-1 lg:grid-cols-12 px-space-lg py-space-lg bg-surface-container hover:bg-surface-container-high/50 transition-colors items-center gap-space-sm">
+<div class="lg:col-span-4 flex flex-col">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-brand-cyan shadow-[0_0_8px_rgba(0,160,223,0.6)]"></span>
+<span class="font-title-md text-title-md text-cream-soft font-semibold">4 BHK Ultra-Luxury Residences</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">360° Fairway Panoramas • Private Foyer • Grand Dining</span>
+</div>
+<div class="lg:col-span-2 flex flex-col">
+<span class="lg:hidden text-xs text-gold-muted uppercase font-label-eyebrow">Area:</span>
+<span class="font-title-md text-title-md text-on-surface">3,294 Sq. Ft.</span>
+</div>
+<div class="lg:col-span-3 flex flex-col">
+<span class="lg:hidden text-xs text-gold-muted uppercase font-label-eyebrow">Price:</span>
+<span class="font-metric-price text-metric-price text-gold-champagne">₹5.75 Cr – ₹6.80 Cr*</span>
+<span class="font-body-sm text-xs text-on-surface-variant">Presidential Sky Suites</span>
+</div>
+<div class="lg:col-span-3 flex items-center justify-start lg:justify-end gap-space-xs">
+<button class="px-space-md py-space-sm bg-surface-container-high hover:bg-primary-container border border-primary/30 text-primary font-label-button text-label-button rounded-lg transition-colors" onclick="document.getElementById('inquiryTypology').value='4 BHK Ultra-Luxury Residences'; location.href='#vip-inquiry-section';">
+                Lock EOI
+              </button>
+<button class="px-space-md py-space-sm bg-surface-container-high hover:bg-surface-variant text-cream-soft font-label-button text-label-button rounded-lg transition-colors border border-surface-variant" onclick="document.getElementById('brochureModal').classList.remove('hidden')">
+                View Plan
+              </button>
+</div>
+</div>
+<!-- Row 4 -->
+<div class="grid grid-cols-1 lg:grid-cols-12 px-space-lg py-space-lg bg-surface-container-low hover:bg-surface-container-high/50 transition-colors items-center gap-space-sm">
+<div class="lg:col-span-4 flex flex-col">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(233,195,73,0.6)]"></span>
+<span class="font-title-md text-title-md text-cream-soft font-semibold">Evoke &amp; Exquisite Luxury Villas</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">150 to 180 Sq.Yd Plots • Independent Courtyard • Private Pool</span>
+</div>
+<div class="lg:col-span-2 flex flex-col">
+<span class="lg:hidden text-xs text-gold-muted uppercase font-label-eyebrow">Area:</span>
+<span class="font-title-md text-title-md text-on-surface">3,715 – 4,177 Sq. Ft.</span>
+</div>
+<div class="lg:col-span-3 flex flex-col">
+<span class="lg:hidden text-xs text-gold-muted uppercase font-label-eyebrow">Price:</span>
+<span class="font-metric-price text-metric-price text-cream-soft">Price on Request</span>
+<span class="font-body-sm text-xs text-on-surface-variant">Immediate Handover Ready</span>
+</div>
+<div class="lg:col-span-3 flex items-center justify-start lg:justify-end gap-space-xs">
+<button class="px-space-md py-space-sm bg-gold-champagne hover:bg-gold-muted text-surface-container-lowest font-label-button text-label-button rounded-lg transition-colors" onclick="document.getElementById('inquiryTypology').value='Luxury Golf Villa (150-180 Sq.Yd)'; location.href='#vip-inquiry-section';">
+                Inquire Villa
+              </button>
+<button class="px-space-md py-space-sm bg-surface-container-high hover:bg-surface-variant text-cream-soft font-label-button text-label-button rounded-lg transition-colors border border-surface-variant" onclick="document.getElementById('brochureModal').classList.remove('hidden')">
+                Villa Layouts
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Payment Plan Banner with Godrej Tricolor Gradient Flourish -->
+<div class="p-space-lg md:p-space-xl relative overflow-hidden bg-gradient-to-r from-emerald-deep via-surface-container-high to-surface-container rounded-2xl shadow-xl border border-surface-container-highest flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<!-- Subtle Godrej Tricolor Ribbon Top Accent -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-ruby via-brand-azure to-primary"></div>
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="text-gold-champagne font-bold text-lg">♦</span>
+<span class="font-label-eyebrow text-label-eyebrow text-gold-champagne uppercase">Payment Structure Privilege</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-cream-soft">The 30:40:30 Crown Payment Framework</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Pay 30% upon booking, 40% tied to structural construction stages, and balance 30% on handover. Plus get ₹2 Lakh Early Bird EOI advantage + ₹1 Lakh extra benefit on token swipe.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm shrink-0 w-full sm:w-auto">
+<a class="w-full sm:w-auto text-center px-space-lg py-space-md bg-gold-champagne hover:bg-gold-muted text-surface-container-lowest font-label-button text-label-button rounded-xl transition-all shadow-[0_4px_16px_rgba(212,175,55,0.25)]" href="#vip-inquiry-section">
+            Avail 30:40:30 Plan
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- CURATED TOWNSHIP AMENITIES & ECOSYSTEM -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-2xl">
+<!-- Section Heading -->
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase">The Leisure Realm</span>
+<h2 class="font-headline-lg text-headline-lg text-cream-soft">World-Class Curated Amenities</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Designed as an unhurried sanctuary where sporting prowess, restorative wellness, and bespoke entertaining come standard.</p>
+</div>
+<!-- Amenity Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Amenity 1 -->
+<div class="p-space-lg bg-surface-container rounded-2xl flex flex-col gap-space-md shadow-md border border-surface-container-high hover:border-primary/40 hover:bg-surface-container-high transition-all">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high border border-primary/30 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[30px]">golf_course</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-cream-soft">9-Hole Executive Golf Course</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">A lush green expanse just paces outside your private lobby, complete with practice putting greens, fairway water hazards, and pro coaching clinics.</p>
+</div>
+<div class="mt-auto pt-2 flex items-center gap-2 text-primary font-body-sm text-xs">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">Illuminated for Twilight Play</span>
+</div>
+</div>
+<!-- Amenity 2 -->
+<div class="p-space-lg bg-surface-container rounded-2xl flex flex-col gap-space-md shadow-md border border-surface-container-high hover:border-gold-champagne/40 hover:bg-surface-container-high transition-all">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high border border-gold-champagne/30 text-gold-champagne flex items-center justify-center">
+<span class="material-symbols-outlined text-[30px]">nightlife</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-cream-soft">Grand Central Clubhouse</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">A vast social epicenter paired with intimate cluster-specific recreation lounges, fine-dining restaurants, banquet halls, and cigar lounges.</p>
+</div>
+<div class="mt-auto pt-2 flex items-center gap-2 text-gold-champagne font-body-sm text-xs">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">Over 50,000 Sq. Ft. Realm</span>
+</div>
+</div>
+<!-- Amenity 3 -->
+<div class="p-space-lg bg-surface-container rounded-2xl flex flex-col gap-space-md shadow-md border border-surface-container-high hover:border-brand-cyan/40 hover:bg-surface-container-high transition-all">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high border border-brand-cyan/30 text-brand-cyan flex items-center justify-center">
+<span class="material-symbols-outlined text-[30px]">pool</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-cream-soft">Heated Indoor Pools &amp; Spas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">All-season temperature-regulated lap pools, shallow kids splash decks, Ayurvedic restorative therapy rooms, hydrotherapy jacuzzis, and steam saunas.</p>
+</div>
+<div class="mt-auto pt-2 flex items-center gap-2 text-brand-cyan font-body-sm text-xs">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">Dedicated Olympic Length</span>
+</div>
+</div>
+<!-- Amenity 4 -->
+<div class="p-space-lg bg-surface-container rounded-2xl flex flex-col gap-space-md shadow-md border border-surface-container-high hover:border-primary/40 hover:bg-surface-container-high transition-all">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high border border-primary/30 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[30px]">sports_tennis</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-cream-soft">Sports Arena Complex</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Multi-surface tournament tennis courts, indoor air-conditioned squash courts, professional badminton arenas, and outdoor basketball zones.</p>
+</div>
+<div class="mt-auto pt-2 flex items-center gap-2 text-primary font-body-sm text-xs">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">Professional Turf &amp; Surfaces</span>
+</div>
+</div>
+<!-- Amenity 5 -->
+<div class="p-space-lg bg-surface-container rounded-2xl flex flex-col gap-space-md shadow-md border border-surface-container-high hover:border-gold-champagne/40 hover:bg-surface-container-high transition-all">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high border border-gold-champagne/30 text-gold-champagne flex items-center justify-center">
+<span class="material-symbols-outlined text-[30px]">local_movies</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-cream-soft">Drive-In Cinema &amp; Parks</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Greater Noida’s first township open-air drive-in cinema, coupled with the lush Viva Terra themed garden pathways for peaceful evening retreats.</p>
+</div>
+<div class="mt-auto pt-2 flex items-center gap-2 text-gold-champagne font-body-sm text-xs">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">Integrated Avenue 9 Boulevard</span>
+</div>
+</div>
+<!-- Amenity 6 -->
+<div class="p-space-lg bg-surface-container rounded-2xl flex flex-col gap-space-md shadow-md border border-surface-container-high hover:border-brand-ruby-vivid/40 hover:bg-surface-container-high transition-all">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high border border-brand-ruby-vivid/30 text-brand-ruby-vivid flex items-center justify-center">
+<span class="material-symbols-outlined text-[30px]">shield_with_heart</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-cream-soft">Multi-Tier Sanctuary Security</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Biometric entry corridors, automated boom barriers with RFID identification, AI-powered boundary perimeter sweeps, and 24/7 dedicated concierge.</p>
+</div>
+<div class="mt-auto pt-2 flex items-center gap-2 text-primary font-body-sm text-xs">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">Private Diplomatic Standards</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- STRATEGIC CONNECTIVITY & LOCATION ADVANTAGE -->
+<section class="w-full bg-surface-container-low py-space-2xl">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Location Visual / Map -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="w-full h-[400px] lg:h-[480px] bg-cover bg-center rounded-2xl shadow-xl relative overflow-hidden border border-surface-container-high" data-location="Sector 27 Greater Noida Near Pari Chowk" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBfBDIR8VhwBqe42vax46Tqiuib-7ELiFkbyBeqIgHlqvK24Rig8c_Du9DGD-ik1whYzApXyHYUV9nKRt_QO4-yMS_yE6tevpL4OLjJVdIqMSE3u8EtA0U5yF4of3wxdFhQK1D6P7WT5m3Gv5lyt9fTojIWcF0htQALLcmhhS5kSMS_4YI6wN3-zKtpNF8qxpSyjzJUDJ61swQ9-OFTUDiF2DS9WAa9JAoJGHPA4pE')">
+<!-- Map Card Pin Overlay -->
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container/90 backdrop-blur-md border border-border-gold-subtle p-space-md rounded-xl shadow-lg flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-gold-champagne text-surface-container-lowest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-cream-soft">Sector 27, Greater Noida</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Adjacent to Pari Chowk &amp; Yamuna Expressway Corridor</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Connectivity Content -->
+<div class="lg:col-span-6 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-eyebrow text-label-eyebrow text-gold-champagne uppercase">Epicenter of Expansion</span>
+<h2 class="font-headline-lg text-headline-lg text-cream-soft">Strategic Connectivity Advantage</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Sector 27 puts you at the nexus of the Noida-Greater Noida growth corridor, offering uncompromised signal-free connectivity to key hubs, airports, and prestigious social infrastructure.
+            </p>
+</div>
+<!-- Transit Points -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-md p-space-md bg-surface-container border border-surface-container-high rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-gold-champagne text-[24px] mt-0.5">flight_takeoff</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-cream-soft">Noida International Airport (Jewar)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Signal-free effortless cruise via Yamuna Expressway. Poised for unmatched capital appreciation.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md p-space-md bg-surface-container border border-surface-container-high rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-brand-cyan text-[24px] mt-0.5">subway</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-cream-soft">Aqua Line Metro (Delta 1 Station)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Just 3 minutes from your residence, providing smooth rapid transit across Noida, Greater Noida, and South Delhi.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md p-space-md bg-surface-container border border-surface-container-high rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-primary text-[24px] mt-0.5">add_road</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-cream-soft">Noida–Greater Noida Expressway</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Rapid vehicular artery to corporate business districts, educational universities, and premier healthcare facilities.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE VIP ENQUIRY / EOI BOOKING FORM -->
+<section class="w-full bg-surface py-space-2xl" id="vip-inquiry-section">
+<div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center bg-surface-container rounded-2xl p-space-lg md:p-space-2xl shadow-2xl border border-surface-container-high">
+<!-- Text & Authority Info -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high border border-border-gold-subtle rounded-full w-fit">
+<span class="w-2 h-2 rounded-full bg-gold-champagne animate-pulse"></span>
+<span class="font-label-eyebrow text-label-eyebrow uppercase text-gold-champagne">Official Channel Partner Desk</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-cream-soft">
+            Schedule a Private Site Tour &amp; Lock Early Bird EOI
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Connect directly with an executive golf portfolio consultant. Secure your priority invitation to the preview gallery, personalized unit availability, and special launch pricing privileges.
+          </p>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<a class="flex items-center gap-space-sm p-space-sm bg-surface-container-high/60 border border-surface-variant rounded-xl hover:bg-surface-container-high transition-colors" href="tel:+919311374500">
+<div class="w-10 h-10 rounded-lg bg-gold-champagne/10 text-gold-champagne flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-eyebrow text-xs uppercase text-gold-muted">Direct Priority Helpline</span>
+<span class="font-title-md text-title-md text-cream-soft">+91 93113 74500</span>
+</div>
+</a>
+<div class="flex items-center gap-space-sm p-space-sm bg-surface-container-high/60 border border-surface-variant rounded-xl">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-eyebrow text-xs uppercase text-primary">UP RERA Registered</span>
+<span class="font-body-sm text-body-sm text-cream-soft">UPRERAAGT10058</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Capture Form Card -->
+<div class="lg:col-span-7 bg-surface-container-low border border-surface-container-high p-space-lg md:p-space-xl rounded-2xl shadow-lg">
+<form class="flex flex-col gap-space-md" id="eoiLeadForm" onsubmit="event.preventDefault(); document.getElementById('formSuccessMsg').classList.remove('hidden');">
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm text-cream-soft">Request Expression of Interest (EOI)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant access to detailed cost sheets, layout blueprints &amp; site visit slots</span>
+</div>
+<!-- Form Success Notification -->
+<div class="hidden p-space-md bg-primary-container border border-primary/30 text-primary rounded-xl flex items-center gap-space-sm" id="formSuccessMsg">
+<span class="material-symbols-outlined text-[22px]">check_circle</span>
+<span class="font-body-sm text-body-sm font-semibold">Thank you! Your private preview slot has been reserved. Our senior advisor will connect shortly.</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-eyebrow text-xs uppercase text-gold-muted">Full Legal Name *</label>
+<input class="px-space-md py-space-sm bg-surface-container border border-surface-variant text-on-surface rounded-xl placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary transition-colors" placeholder="e.g. Vikramaditya Singhania" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-eyebrow text-xs uppercase text-gold-muted">Email Address *</label>
+<input class="px-space-md py-space-sm bg-surface-container border border-surface-variant text-on-surface rounded-xl placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary transition-colors" placeholder="vikram@domain.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-eyebrow text-xs uppercase text-gold-muted">Contact Number *</label>
+<div class="flex items-center gap-2">
+<span class="px-3 py-space-sm bg-surface-container border border-surface-variant text-on-surface font-body-sm rounded-xl shrink-0">+91</span>
+<input class="w-full px-space-md py-space-sm bg-surface-container border border-surface-variant text-on-surface rounded-xl placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary transition-colors" pattern="[0-9]{10}" placeholder="9876543210" required="" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-eyebrow text-xs uppercase text-gold-muted">Typology Preference</label>
+<select class="px-space-md py-space-sm bg-surface-container border border-surface-variant text-on-surface rounded-xl focus:outline-none focus:border-primary transition-colors" id="inquiryTypology">
+<option value="3 BHK Golf Residences">3 BHK Golf Residences (1,769 Sq.Ft.)</option>
+<option value="3 BHK Large Golf Residences">3 BHK Large Golf Residences (2,392 Sq.Ft.)</option>
+<option value="4 BHK Ultra-Luxury Residences">4 BHK Ultra-Luxury Residences (3,294 Sq.Ft.)</option>
+<option value="Luxury Golf Villa (150-180 Sq.Yd)">Luxury Golf Villa (150-180 Sq.Yd)</option>
+<option value="Godrej Avenue 9 Commercial">Godrej Avenue 9 Commercial Retail</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-eyebrow text-xs uppercase text-gold-muted">Preferred Site Visit Date / Notes</label>
+<input class="px-space-md py-space-sm bg-surface-container border border-surface-variant text-on-surface rounded-xl placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary transition-colors" placeholder="This weekend / morning slot / golf cart tour requested" type="text"/>
+</div>
+<div class="flex items-start gap-space-xs text-on-surface-variant text-[11px] leading-relaxed pt-1">
+<input checked="" class="mt-0.5 rounded accent-gold-champagne cursor-pointer" required="" type="checkbox"/>
+<span class="">I authorize Godrej Golf Links representatives to call, SMS, or WhatsApp regarding this launch. This overrides any DND registration.</span>
+</div>
+<button class="w-full py-space-md bg-gold-champagne hover:bg-gold-muted text-surface-container-lowest font-label-button text-label-button rounded-xl transition-all shadow-[0_4px_16px_rgba(212,175,55,0.25)] flex items-center justify-center gap-space-xs font-semibold" type="submit">
+<span class="text-brand-ruby-vivid font-bold">♦</span>
+<span class="">Schedule Site Visit &amp; Lock Early Bird EOI</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- BROCHURE MODAL DIALOGUE -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-margin bg-surface-container-lowest/80 backdrop-blur-md" id="brochureModal">
+<div class="bg-surface-container p-space-lg md:p-space-xl rounded-2xl shadow-2xl border border-surface-container-high max-w-lg w-full flex flex-col gap-space-md relative">
+<button class="absolute top-4 right-4 text-on-surface-variant hover:text-cream-soft transition-colors" onclick="document.getElementById('brochureModal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+<div class="flex flex-col gap-1">
+<span class="font-label-eyebrow text-label-eyebrow text-gold-champagne uppercase">Instant Access</span>
+<h3 class="font-headline-sm text-headline-sm text-cream-soft">Download Exclusive E-Brochure</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Includes complete Master Plan layout, individual floor architectural plans, specifications &amp; unit payment schedules.</p>
+</div>
+<form class="flex flex-col gap-space-sm" onsubmit="event.preventDefault(); alert('The brochure dossier has been transmitted to your email/phone.'); document.getElementById('brochureModal').classList.add('hidden');">
+<div class="flex flex-col gap-1">
+<label class="font-label-eyebrow text-xs uppercase text-gold-muted">Full Name</label>
+<input class="px-space-md py-space-sm bg-surface-container-low border border-surface-variant text-on-surface rounded-xl placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary" placeholder="Your Name" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-eyebrow text-xs uppercase text-gold-muted">Mobile Number</label>
+<input class="px-space-md py-space-sm bg-surface-container-low border border-surface-variant text-on-surface rounded-xl placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary" placeholder="+91 98765 43210" required="" type="tel"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-eyebrow text-xs uppercase text-gold-muted">Email Address</label>
+<input class="px-space-md py-space-sm bg-surface-container-low border border-surface-variant text-on-surface rounded-xl placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary" placeholder="name@domain.com" required="" type="email"/>
+</div>
+<button class="mt-space-xs py-space-md bg-gold-champagne hover:bg-gold-muted text-surface-container-lowest font-label-button text-label-button rounded-xl transition-all shadow-md font-semibold" type="submit">
+          Download PDF Dossier (18.4 MB)
+        </button>
+</form>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-surface-container-high/60"><div class="max-w-[1440px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-2xl flex flex-col gap-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Godrej Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvh8QIbO1X1YtQO9jsOXJD1XR8VJg3htDzFTmGFS6xkcLahxESp7HJzpZeNkKwI5yapbJ1ZEPooaTq6PEl1Yx-jPybcDhNsX2xuJcngDAgXRM6jYddpUqiMv_qi7VdRsycvHRDiObLGwq7Ad1-qqj_QyASGHknngru4i5JebWlYh5cuTJpFSFrrk2cJPDW5cv7WY59Xc8PHIWa2OBF2hia7WHNIBb54PfqAJVl7kg"/><span class="font-headline-sm text-headline-sm text-cream-soft">Godrej Golf Links</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">An enclave of 100-acre mastercrafted residential luxury enveloped by an expansive 9-hole golf course, private clubhouse spheres, and presidential fairways in Sector 27, Greater Noida.</p><div class="flex items-center gap-space-xs font-label-eyebrow text-label-eyebrow text-gold-champagne"><span class="text-brand-ruby-vivid">♦</span><span class="">UPRERA REGISTRATION NO. UPRERAAGT10058</span></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><span class="font-label-eyebrow text-label-eyebrow text-gold-muted uppercase">Typologies</span><nav class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-cream-soft transition-colors" href="#">The Presidential Suites</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-cream-soft transition-colors" href="#">Fairway Facing 4 BHK</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-cream-soft transition-colors" href="#">Crown Signature 3 BHK</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-cream-soft transition-colors" href="#">Golf Course Villas</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-cream-soft transition-colors" href="#">Avenue 9 Boulevard</a></nav></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><span class="font-label-eyebrow text-label-eyebrow text-gold-muted uppercase">Explore</span><nav class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-cream-soft transition-colors" href="#">Architectural Narrative</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-cream-soft transition-colors" href="#">Grand Clubhouse Suite</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-cream-soft transition-colors" href="#">Pari Chowk Connectivity</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-cream-soft transition-colors" href="#">Investment Specifications</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-cream-soft transition-colors" href="#">E-Brochure Dossier</a></nav></div><div class="lg:col-span-4 flex flex-col gap-space-md"><span class="font-label-eyebrow text-label-eyebrow text-gold-muted uppercase">Private Advisory &amp; Inquiries</span><p class="font-body-sm text-body-sm text-on-surface-variant">Connect with our specialized golf residences concierge for private viewings and tailored investment dossiers.</p><div class="flex flex-col gap-space-xs"><a class="flex items-center gap-space-xs font-title-md text-title-md text-cream-soft hover:text-gold-champagne transition-colors" href="tel:+919311374500"><span class="material-symbols-outlined text-gold-champagne text-[20px]">phone_in_talk</span>+91 93113 74500</a><span class="font-body-sm text-body-sm text-on-surface-variant">Site Address: Plot No. GH-01, Sector 27, Near Pari Chowk, Greater Noida, UP 201310</span></div></div></div><div class="flex flex-col gap-space-md pt-space-lg text-on-surface-variant"><p class="font-body-sm text-body-sm leading-relaxed opacity-75">Disclaimer: The visual imagery, artistic impressions, elevations, and layout designs portrayed are indicative and architectural representations only. The project is registered under Uttar Pradesh Real Estate Regulatory Authority (UP RERA) Registration No. UPRERAAGT10058, viewable at up-rera.in. Godrej Properties Limited reserves the right to make modifications in accordance with approvals.</p><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm"><span class="text-on-surface-variant">© 2025 Godrej Golf Links. All Rights Reserved.</span><div class="flex items-center gap-space-md"><a class="text-on-surface-variant hover:text-cream-soft transition-colors" href="#">Privacy Policy</a><a class="text-on-surface-variant hover:text-cream-soft transition-colors" href="#">Terms of Service</a><a class="text-on-surface-variant hover:text-cream-soft transition-colors" href="#">RERA Certification</a></div></div></div></div></footer>
+</body></html>
